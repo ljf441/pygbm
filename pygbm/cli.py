@@ -26,10 +26,10 @@ def main():
         simulator = MilsteinSimulator(args.y0, args.mu, args.sigma)
         t_values, y_values = simulator.simulate_milpath(args.T, args.N)
 
-    plt.plot(t_values, y_values, label=f"{args.method.capitalize()} path")
+    plt.plot(t_values, y_values, label=f"{args.method.upper()} path")
     plt.xlabel("Time")
     plt.ylabel("Y(t)")
-    plt.title(f"Simulated geometric Brownian motion path using {args.method.capitalize()}")
+    plt.title(f"Simulated geometric Brownian motion path using {args.method.upper()}")
     plt.legend()
     plt.grid()
 

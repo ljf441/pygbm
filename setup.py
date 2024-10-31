@@ -7,6 +7,7 @@ setup(
     install_requires=[
         'numpy',  # Ensure no trailing commas or unmatched parentheses
         'matplotlib',
+        'jupyter'
     ],  # Correct this section
     entry_points={
         'console_scripts': [
