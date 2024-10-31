@@ -1,5 +1,0 @@
-Metadata-Version: 2.1
-Name: your_package
-Version: 0.1
-Requires-Dist: numpy
-Requires-Dist: matplotlib

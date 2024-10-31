@@ -1,8 +1,0 @@
-setup.py
-pygbm/__init__.py
-pygbm/gbm_simulator.py
-your_package.egg-info/PKG-INFO
-your_package.egg-info/SOURCES.txt
-your_package.egg-info/dependency_links.txt
-your_package.egg-info/requires.txt
-your_package.egg-info/top_level.txt
