@@ -1,9 +1,13 @@
 C1P2Q2.ipynb
+Dockerfile
 README.md
+gbm_plot.png
 pyproject.toml
 script.py
 setup.py
 .ipynb_checkpoints/C1P2Q2-checkpoint.ipynb
+dist/pygbm-0.1-py3-none-any.whl
+dist/pygbm-0.1.tar.gz
 pygbm/__init__.py
 pygbm/cli.py
 pygbm/gbm_simulator.py
@@ -15,4 +19,5 @@ pygbm.egg-info/entry_points.txt
 pygbm.egg-info/requires.txt
 pygbm.egg-info/top_level.txt
 pygbm/__pycache__/__init__.cpython-312.pyc
+pygbm/__pycache__/cli.cpython-312.pyc
 pygbm/__pycache__/gbm_simulator.cpython-312.pyc
