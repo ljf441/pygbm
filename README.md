@@ -5,6 +5,6 @@
 The **pygbm** package is a Python package designed to simulate geometric Brownian motion.
 
 ## Features
-- **GBMSimulator**: core attributes and implements analytic method
+- **GBMSimulator**: core attributes and implements the analytic method
 - **EulerMaruyama**: implements the Euler-Maruyama method
 - **MilsteinSimulator**: implements the Milstein method
