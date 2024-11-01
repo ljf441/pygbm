@@ -60,14 +60,10 @@ jobs:
     - name: Rename distribution files
       run: |
         for file in dist/*; do
-          new_name=$(echo "$file" | sed 's/dev[0-9]*//; s/+g[^-]*//; s/+/-/g')
-          if [ -z "$new_name" ]; then
-            echo "Warning: new name is empty for $file"
-            continue
-          fi
-          echo "Renaming $file to $new_name"  # Debug output
+          new_name=$(echo "$file" | sed -E 's/dev[0-9]*//; s/\+.*//; s/\.{2,}/./g; s/(.*)(\.tar\.gz|\.whl)$/\1\2/')
           mv "$file" "$new_name"
         done
+
 
     - name: List distribution files
       run: |
