@@ -1,7 +1,41 @@
+# Ignore build artifacts
+build/
 dist/
 pygbm.egg-info/
-build/
-gbm_plot.png
+
+# Ignore Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore IDE/editor specific files
+*.swp          # Vim swap files
+*.sublime-project
+*.sublime-workspace
+*.idea/        # JetBrains IDEs (e.g., PyCharm)
+.vscode/       # Visual Studio Code
+
+# Ignore environment directories
+env/
+venv/
+ENV/
+venv.bak/
+
+# Ignore configuration files
 .npmrc
-*.ipynb
+
+# Ignore documentation build artifacts
+docs/_build/
+docs/doctrees/
+
+# Ignore specific files
+C1P2Q2.ipynb
 script.py
+gbm_plot.png 
