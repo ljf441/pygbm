@@ -32,4 +32,4 @@ jobs:
         MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
       run: |
         pip install twine
-        twine upload --repository-url https://nuget.pkg.github.com/ljf441/index.json dist/* -u ${{ github.actor }} -p $MY_GITHUB_TOKEN
+        twine upload --verbose --repository-url https://nuget.pkg.github.com/ljf441/index.json dist/* -u ${{ github.actor }} -p $MY_GITHUB_TOKEN
