@@ -32,4 +32,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for authentication
       run: |
         pip install twine
-        twine upload --repository-url https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json dist/* -u ${{ github.actor }} -p $GITHUB_TOKEN
+        twine upload --repository-url https://upload.github.com/ljf441/pygbm dist/* -u ${{ github.actor }} -p $GITHUB_TOKEN
