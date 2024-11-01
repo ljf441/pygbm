@@ -5,7 +5,6 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pygbm" # name of the package must match the core folder name
 version = "0.1.dev1"  # Add the version here
-dynamic = ["version"]
 description = "A Python package for geometric Brownian motion simulation."
 readme = "README.md"
 requires-python = ">=3.6"
