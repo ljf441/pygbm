@@ -29,7 +29,7 @@ jobs:
 
     - name: Publish package to GitHub Packages
       env:
-        MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         pip install twine
-        twine upload --verbose --repository-url https://nuget.pkg.github.com/ljf441/index.json dist/* -u ${{ github.actor }} -p $MY_GITHUB_TOKEN
+        twine upload --verbose --repository-url https://upload.github.com/ljf441/pygbm dist/* -u ${{ github.actor }} -p $GITHUB_TOKEN
