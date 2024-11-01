@@ -68,7 +68,7 @@ Here's a quick example of how to use the package:
 Documentation
 -------------
 
-Visit our `documentation page <https://your-readthedocs-url-here>`_.
+Visit our `documentation page <https://ljf441-pygbm.readthedocs.io/en/latest>`_.
 
 Contributing
 ------------
@@ -80,4 +80,14 @@ License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
 
+API Reference
+-------------------------------------------------------------------------------
 
+
+.. automodule:: pygbm.gbm_simulator
+    :members:
+    :undoc-members:
+
+.. automodule:: pygbm.cli 
+    :members:
+    :undoc-members
