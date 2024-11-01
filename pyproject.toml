@@ -3,8 +3,8 @@ requires = ["setuptools", "wheel", "setuptools_scm"]  # Build requirements
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pygbm" # name of the package must match the core folder name
-version = "0.1.dev1"  # Add the version here
+name = "pygbm"  # name of the package must match the core folder name
+version = "0.1.0"  # Update the version here
 description = "A Python package for geometric Brownian motion simulation."
 readme = "README.md"
 requires-python = ">=3.6"
@@ -30,7 +30,3 @@ write_to = "pygbm/version.py"  # Where to write the dynamic version
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["pygbm", "pygbm.*"]  # Include the main package and sub-packages
-
-[project.scripts]
-pygbm = "pygbm.cli:main"
