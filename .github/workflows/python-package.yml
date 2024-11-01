@@ -49,7 +49,7 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}  # Automatically available
+        password: ${{ secrets.MY_GITHUB_TOKEN }}  # Automatically available
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
