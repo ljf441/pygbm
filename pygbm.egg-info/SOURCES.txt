@@ -1,3 +1,6 @@
+.gitattributes
+.gitignore
+.npmrc
 .readthedocs.yml
 C1P2Q2.ipynb
 Dockerfile
@@ -7,11 +10,12 @@ pyproject.toml
 script.py
 setup.py
 .ipynb_checkpoints/C1P2Q2-checkpoint.ipynb
-dist/pygbm-0.1-py3-none-any.whl
 dist/pygbm-0.1.tar.gz
+dist/pygbm.tar.gz
 docs/Makefile
 docs/conf.py
 docs/index.rst
+docs/requirements.txt
 docs/_build/doctrees/environment.pickle
 docs/_build/doctrees/index.doctree
 docs/_build/html/.buildinfo

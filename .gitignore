@@ -1,0 +1,3 @@
+# Ignore specific tar.gz file
+dist/pygbm-0.1.tar.gz
+dist/*.whl
