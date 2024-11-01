@@ -60,13 +60,19 @@ jobs:
     - name: Rename distribution files
       run: |
         for file in dist/*; do
-          new_name=$(echo "$file" | sed 's/dev[0-9]*//; s/+g[^-]*//; s/+/-/g')  # Adjust as necessary
+          new_name=$(echo "$file" | sed 's/dev[0-9]*//; s/+g[^-]*//; s/+/-/g')
+          if [ -z "$new_name" ]; then
+            echo "Warning: new name is empty for $file"
+            continue
+          fi
+          echo "Renaming $file to $new_name"  # Debug output
           mv "$file" "$new_name"
         done
 
     - name: List distribution files
       run: |
-        ls -la dist/
+        ls -l dist/
+
 
     - name: Publish distribution to PyPI
       env:
