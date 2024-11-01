@@ -27,9 +27,8 @@ jobs:
       run: |
         python -m build
 
-    - name: Publish package to GitHub Packages
+    - name: Publish package to PyPI
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}  # Add your token to GitHub secrets
       run: |
-        pip install twine
-        twine upload --verbose --repository-url https://upload.github.com/ljf441/pygbm dist/* -u ${{ github.actor }} -p $GITHUB_TOKEN
+        twine upload --verbose --repository-url https://upload.pypi.org/legacy/ dist/* -u __token__ -p $PYPI_TOKEN

@@ -13,16 +13,16 @@ pygbm Package
 
 | *Author*: Laura Just Fung
 
-.. _pygbm_Package:
+.. _pygbm_package:
 
-The **pygbm Package** is a Python package designed to simulate Brownian moation.
+The **pygbm** package is a Python package designed to simulate Brownian motion.
 
 Features
 --------
 
-- **GBM class**: core attributes and analytic method
-- **Euler-Maruyama**: implements Euler-Maruyama method
-- **Milstein**: implements Milstein method
+- **GBMSimulator**: core attributes and implements analytic method
+- **EulerMaruyama**: implements the Euler-Maruyama method
+- **MilsteinSimulator**: implements the Milstein method
 
 Installation
 ------------
