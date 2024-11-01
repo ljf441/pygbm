@@ -2,7 +2,7 @@
 
 
 # pygbm
-The **pygbm** package is a Python package designed to simulate Brownian motion.
+The **pygbm** package is a Python package designed to simulate geometric Brownian motion.
 
 ## Features
 - **GBMSimulator**: core attributes and implements analytic method
