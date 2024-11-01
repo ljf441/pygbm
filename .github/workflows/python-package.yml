@@ -1,4 +1,4 @@
-name: Build and Publish Python Package and Documentation
+name: Build and Publish Python Package to PyPI
 
 on:
   push:
@@ -34,17 +34,18 @@ jobs:
         path: dist/*
 
   publish-to-pypi:
-    name: >-
-      Publish Python distribution to PyPI
+    name: Publish to PyPI
     needs: build
     runs-on: ubuntu-20.04
-    environment:
-      name: pypi
-      url: https://pypi.org/p/ljf441-pygbm  # Use your actual package name
-    permissions:
-      id-token: write  # IMPORTANT: mandatory for trusted publishing
     steps:
-    - name: Download all the dists
+    - name: Download package distributions
       uses: actions/download-artifact@v3
       with:
-        name: python-pac
+        name: python-package-distributions
+        path: dist/
+      
+    - name: Publish distribution to PyPI
+      env:
+        PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}  # Ensure your token is stored in GitHub secrets
+      run: |
+        twine upload --verbose dist/* -u __token__ -p $PYPI_TOKEN
