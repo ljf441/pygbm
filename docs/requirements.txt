@@ -4,3 +4,4 @@ sphinx_rtd_theme>=1.0
 nbsphinx>=0.8
 myst_parser
 sphinx_gallery
+pytest
