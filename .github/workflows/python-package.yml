@@ -56,7 +56,18 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
-      
+
+    - name: Rename distribution files
+      run: |
+        for file in dist/*; do
+          new_name=$(echo "$file" | sed 's/dev[0-9]*//; s/+g[^-]*//; s/+/-/g')  # Adjust as necessary
+          mv "$file" "$new_name"
+        done
+
+    - name: List distribution files
+      run: |
+        ls -la dist/
+
     - name: Publish distribution to PyPI
       env:
         PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}  # Ensure your token is stored in GitHub secrets
