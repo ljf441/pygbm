@@ -55,4 +55,6 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: .
+        push: true
+        tags: ghcr.io/ljf441/pygbm/pygbm_image:latest
    
