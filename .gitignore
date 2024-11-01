@@ -1,7 +1,7 @@
 dist/
 pygbm.egg-info/
 build/
-*.png
+gbm_plot.png
 .npmrc
-C1P2Q2.ipynb
+*.ipynb
 script.py
