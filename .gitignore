@@ -1,3 +1,7 @@
-# Ignore specific tar.gz file
-dist/*.tar.gz
-dist/*.whl
+dist/
+pygbm.egg-info/
+build/
+*.png
+.npmrc
+C1P2Q2.ipynb
+script.py
