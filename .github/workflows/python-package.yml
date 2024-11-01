@@ -1,4 +1,4 @@
-name: Build and Publish Python Package
+name: Build and Publish Python Package and Documentation
 
 on:
   push:
@@ -7,29 +7,29 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04  # Change to an earlier version of Ubuntu
+    runs-on: ubuntu-20.04  # Use an appropriate Ubuntu version
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3  # Use the latest version of the checkout action
+      uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v4  # Keep the latest version
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.6'  # Specify Python 3.6 here
+        python-version: '3.6'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install build  # Install build for building the package
+        pip install build sphinx
 
     - name: Build package
       run: |
-        python -m build  # Builds the package using pyproject.toml
+        python -m build
 
     - name: Publish package to GitHub Packages
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for authentication
       run: |
         pip install twine
-        twine upload --repository-url https://upload.pypi.org/legacy/ dist/* -u __token__ -p $GITHUB_TOKEN
+        twine upload --repository-url https://nuget.pkg.github.com/<GITHUB_USERNAME>/index.json dist/* -u <GITHUB_USERNAME> -p $GITHUB_TOKEN
