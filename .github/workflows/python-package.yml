@@ -27,8 +27,24 @@ jobs:
       run: |
         python -m build
 
-    - name: Publish package to PyPI
-      env:
-        PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}  # Add your token to GitHub secrets
-      run: |
-        twine upload --verbose dist/* -u __token__ -p $PYPI_TOKEN
+    - name: Upload package distributions
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/*
+
+  publish-to-pypi:
+    name: >-
+      Publish Python distribution to PyPI
+    needs: build
+    runs-on: ubuntu-20.04
+    environment:
+      name: pypi
+      url: https://pypi.org/p/ljf441-pygbm  # Use your actual package name
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v3
+      with:
+        name: python-pac
