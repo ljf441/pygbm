@@ -2,6 +2,7 @@
 build/
 dist/
 pygbm.egg-info/
+tests/
 
 # Ignore Python bytecode and cache
 __pycache__/

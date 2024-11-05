@@ -7,7 +7,8 @@ setup(
     install_requires=[
         'numpy',
         'matplotlib',
-        'jupyter'
+        'jupyter',
+        'pytest'
     ],
     entry_points={
         'console_scripts': [
