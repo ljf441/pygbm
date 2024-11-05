@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='pygbm',
+    name='ljf441-pygbm',
     version='0.1.0',  # Update the version here
     packages=find_packages(),
     install_requires=[
