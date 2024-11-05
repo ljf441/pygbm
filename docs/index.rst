@@ -33,6 +33,12 @@ Ensure you have Python 3.6 or higher. Install the package and its dependencies w
 
     pip install -e .
 
+Or:
+
+.. code-block:: bash
+    pip install ljf441-pygbm
+
+
 Usage
 -----
 
